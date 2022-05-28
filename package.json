@@ -1,0 +1,27 @@
+{
+  "name": "react_development_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetatronL/react_development_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MetatronL/react_development_project/issues"
+  },
+  "homepage": "https://github.com/MetatronL/react_development_project#readme",
+  "dependencies": {
+    "esbuild": "^0.14.41",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1"
+  }
+}
