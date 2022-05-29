@@ -20,6 +20,7 @@ const configGenerator = ({
             path.resolve(__root, "./node_modules"),
         ],
         chunkNames: "chunks/[name].bundle.[hash]",
+		inject: [path.join(__root, "/bundler/logic/injectContent.js")],
 
         loader: {
             ".svg": "dataurl",
@@ -42,7 +43,7 @@ const configGenerator = ({
         target: developmentMode ? ["esnext"] : ["es2017"],
         format: "esm",
         platform: "browser",
-        // jsxFactory: "jsx", // This allows @emotions/react to work. Do not remove.
+        jsxFactory: "jsx", // This allows @emotions/react to work. Do not remove.
         jsxFragment: "Fragment",
         mainFields: ["browser", "module", "main"],
         define: {

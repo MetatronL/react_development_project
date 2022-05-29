@@ -19,7 +19,7 @@ async function startServer({
     app.use(async (ctx) => {
         ctx.response.type = "html";
         ctx.response.body = indexHTML;
-        console.log(ctx);
+        // console.log(ctx);
     });
 
 

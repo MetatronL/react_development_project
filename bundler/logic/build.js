@@ -10,8 +10,6 @@ async function runBundler({
 
     const config = configGenerator({ mode });
 
-    console.log({ config });
-
     const builder = await build(config).catch((error) => {
         console.error(error.message);
 

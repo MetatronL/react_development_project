@@ -1,14 +1,4 @@
-import { createRoot } from 'react-dom/client';
 import React from "react";
+import renderApplication from "./Application/renderApplication";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-
-
-root.render(
-    (
-        <div>
-            Hello
-        </div>
-    )
-);
+renderApplication();
