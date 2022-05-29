@@ -15,7 +15,7 @@ export function createRootReducer()
 export function configureStore(preloadedState) {
     const store = createStore(
         emptyState,
-      preloadedState,
+        preloadedState,
     //   compose(
     //     applyMiddleware(
     //       // middlewares
