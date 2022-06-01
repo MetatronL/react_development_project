@@ -3,13 +3,14 @@ import { Helmet } from "react-helmet-async";
 import { ThemeProvider } from "@emotion/react";
 
 import Router from "./Router";
+import { LightTheme } from "web/Themes";
 
 export default function Application({
     store,
     context,
 })
 {
-	const [theme, setTheme] = useState({});
+	const [theme, setTheme] = useState(LightTheme);
 
 
     return (
