@@ -1,7 +1,6 @@
 /* eslint-disable brace-style */
 import { useState, useEffect, useMemo } from "react";
 import { useTranslations } from "web/Hooks";
-import { Button, TextInput } from "web/Components/Common/Inputs";
 import { ErrorElement, LoadingElement } from "web/Components/Common/PageElements";
 
 

@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 
 function IndexComponent({
-	linkToProduct,
-	hrefTo,
+	linkToProduct = null,
+	hrefTo = null,
 	index,
 })
 {
-	if (linkToProduct) {
+	if (linkToProduct)
+	{
 		return (
 			<Link
 				to={linkToProduct}
@@ -17,27 +18,32 @@ function IndexComponent({
 					minWidth: "2rem",
 				}}
 			>
-				#{index}
+				{`#${index}`}
 			</Link>
 		);
 	}
 
-	if (hrefTo) {
-		return <a
-			target="_blank"
-			href={hrefTo}
-			rel="noreferrer"
-			css={{
-				textDecoration: "none !important",
-				display: "inline-block",
-				minWidth: "2rem",
-			}}
-		>#{index}</a>;
+	if (hrefTo)
+	{
+		return (
+			<a
+				target="_blank"
+				href={hrefTo}
+				rel="noreferrer"
+				css={{
+					textDecoration: "none !important",
+					display: "inline-block",
+					minWidth: "2rem",
+				}}
+			>
+				{`#${index}`}
+			</a>
+		);
 	}
 
 	return (
 		<span>
-			#{index}
+			{`#${index}`}
 		</span>
 	);
 }

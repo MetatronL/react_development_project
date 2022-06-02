@@ -20,6 +20,7 @@
   "homepage": "https://github.com/MetatronL/react_development_project#readme",
   "dependencies": {
     "@emotion/react": "^11.9.0",
+    "bootstrap": "^5.1.3",
     "esbuild": "^0.14.41",
     "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
