@@ -2,34 +2,34 @@ import { combineReducers, applyMiddleware, compose, createStore } from "redux";
 
 
 function emptyState(state = [], action) {
-  return state;
+	return state;
 }
 
 export function createRootReducer()
 {
-    return combineReducers({
-        // reducers
-    });
+	return combineReducers({
+		// reducers
+	});
 }
 
 export function configureStore(preloadedState) {
-    const store = createStore(
-        emptyState,
-        preloadedState,
-    //   compose(
-    //     applyMiddleware(
-    //       // middlewares
-    //     ),
-    //   ),
-    );
-  
-    return store;
+	const store = createStore(
+		emptyState,
+		preloadedState,
+		//   compose(
+		//     applyMiddleware(
+		//       // middlewares
+		//     ),
+		//   ),
+	);
+
+	return store;
 }
 
 
 export function createReduxBindings()
 {
-    const store = configureStore(/* provide initial state if any */);
+	const store = configureStore(/* provide initial state if any */);
 
-    return { store };
+	return { store };
 }

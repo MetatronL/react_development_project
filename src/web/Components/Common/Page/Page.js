@@ -1,22 +1,22 @@
 import Sidebar from "../Sidebar";
 
 export default function Page({
-    children,
+	children,
 })
 {
-    return (
-        <div>
-            <div
-                css={{
-                    display: "flex",
-                }}
-            >
-                <Sidebar />
+	return (
+		<div>
+			<div
+				css={{
+					display: "flex",
+				}}
+			>
+				<Sidebar />
 
-                <div>
-                    {children}
-                </div>
-            </div>
-        </div>
-    );
+				<div>
+					{children}
+				</div>
+			</div>
+		</div>
+	);
 }

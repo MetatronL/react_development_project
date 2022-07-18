@@ -6,7 +6,6 @@ function resetDistFolder(outputDir, {
 	importIndexHtml = true,
 } = {})
 {
-
 	const removeDirFunction = fs.rmSync || fs.rmdirSync;
 	removeDirFunction(outputDir, { recursive: true, force: true });
 
