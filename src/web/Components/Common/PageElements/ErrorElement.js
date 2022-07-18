@@ -1,7 +1,7 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, useMemo } from "react";
 import { Button } from "web/Components/Common/Inputs";
 
-import { getErrorMessage } from "web/Logic"
+import { getErrorMessage } from "web/Logic";
 import { useTranslations } from "web/Hooks";
 
 const cssBreakWord = {
@@ -13,24 +13,24 @@ export default function ErrorElement({
 	errrorTitle,
 	error,
 	handleRetry,
-    maxLength = 340,
+	maxLength = 340,
 })
 {
-    const errorMessage = useMemo(() => {
-        if (error instanceof Error)
-        {
-            return getErrorMessage(error);
-        }
+	const errorMessage = useMemo(() => {
+		if (error instanceof Error)
+		{
+			return getErrorMessage(error);
+		}
 
-        return error;
-    }, []);
+		return error;
+	}, [error]);
 
 	const { t } = useTranslations();
 	const [showFullError, setShowFullError] = useState(false);
-    const showMore = useCallback(() => setShowFullError(true), []);
+	const showMore = useCallback(() => setShowFullError(true), []);
 
-	const errorTrimmed = React.useMemo(() => errorMessage.trim(), [errorMessage]);
-	const errorTruncated = React.useMemo(() => errorTrimmed.substr(0, maxLength), [errorTrimmed]);
+	const errorTrimmed = useMemo(() => errorMessage.trim(), [errorMessage]);
+	const errorTruncated = useMemo(() => errorTrimmed.substr(0, maxLength), [errorTrimmed, maxLength]);
 
 	const showTruncatedError = errorTruncated.length < errorTrimmed.length && !showFullError;
 
@@ -69,7 +69,7 @@ export default function ErrorElement({
 
 					{!!handleRetry && (
 						<Button
-                            variant="link"
+							variant="link"
 							onClick={handleRetry}
 						>
 							{t("RETRY")}
