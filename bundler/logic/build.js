@@ -28,6 +28,8 @@ async function runBundler({
 	{
 		builder.stop();
 	}
+
+	process.exit(1);
 }
 
 
